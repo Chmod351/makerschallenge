@@ -1,4 +1,4 @@
-import { liqVol, vapVol } from './service.ts';
+import { liqVol, vapVol } from './service';
 import type { Request, Response } from 'express';
 
 function solveNinthChallenge(req: Request, res: Response) {

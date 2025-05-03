@@ -1,4 +1,4 @@
-import env from '../../config/serverConfig.ts';
+import env from '../../config/serverConfig';
 
 type ParsedMesearument = { distance: number; time: number };
 type RawMesearument = {

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import solveFirstChallenge from '../challenges/firstChallenge/controller.ts';
-import solveNinthChallenge from '../challenges/ninthChallenge/controller.ts';
+import solveFirstChallenge from '../challenges/firstChallenge/controller';
+import solveNinthChallenge from '../challenges/ninthChallenge/controller';
 const router = Router();
 
 router.get('/phase-change-diagram', solveNinthChallenge);

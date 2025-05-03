@@ -1,5 +1,5 @@
 import type { NextFunction, Request, Response } from 'express';
-import { calculateSpeed, getMeasurement, getSolution } from './service.ts';
+import { calculateSpeed, getMeasurement, getSolution } from './service';
 
 type RawMesearument = {
   distance: string;
