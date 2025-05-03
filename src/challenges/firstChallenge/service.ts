@@ -33,7 +33,7 @@ export async function getMeasurement(): Promise<RawMesearument | undefined> {
       }
     } catch (e) {
       console.log(e);
-      throw new Error(e.message ?? errMessage);
+      throw new Error(errMessage);
     }
   }
 }
@@ -57,6 +57,6 @@ export async function getSolution({ speed }: { speed: number }) {
     return data;
   } catch (error) {
     console.log(error);
-    throw new Error(error.message ?? 'something went wrong trying to send solution');
+    throw new Error('something went wrong trying to send solution');
   }
 }
