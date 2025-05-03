@@ -7,10 +7,16 @@ export default function errorHandler(
   next: NextFunction,
 ) {
   if (error && error.message) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({
+      status: 'error',
+      message: error.message,
+    });
   } else {
     console.log(error.message);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({
+      status: 'error',
+      message: 'Internal Server Error',
+    });
   }
   next();
 }
