@@ -10,7 +10,7 @@ async function solveFirstChallenge(req: Request, res: Response, next: NextFuncti
   try {
     const measure: RawMesearument | undefined = await getMeasurement();
     if (!measure) {
-      return next(new Error('measurement unavailable'));
+      throw new Error('measurement unavailable');
     }
     const { distance, time }: RawMesearument = measure;
 
@@ -28,10 +28,12 @@ async function solveFirstChallenge(req: Request, res: Response, next: NextFuncti
     const challengeResult = await getSolution({ speed });
 
     res.status(200).json({
-      status: 'ok',
-      result: challengeResult,
-      distance: parsedDistance,
-      time: parsedTime,
+      status: 'success',
+      data: {
+        result: challengeResult,
+        distance: parsedDistance,
+        time: parsedTime,
+      },
     });
   } catch (error) {
     // subo cualquier error al error handler
