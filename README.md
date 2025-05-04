@@ -1,12 +1,12 @@
 #  Challenge - API para Makers Challenge
 
-Este repositorio contiene una API desarrollada en TypeScript + Express, diseñada para resolver múltiples retos del Makers Challenge. La app está dockerizada y lista para deployar en plataformas como Render o Vercel.
+Este repositorio contiene una API desarrollada en `TypeScript + Express`, diseñada para resolver múltiples retos del Makers Challenge. La app está dockerizada y lista para deployar en plataformas como `Render` o `Vercel`.
 
 ##  Estructura del proyecto
 
-```  
-``````
-``src/
+
+```
+src/
 ├── challenges/ # Controladores y servicios para cada reto
 │ ├── firstChallenge/
 │ └── ninthChallenge/
@@ -18,7 +18,7 @@ Este repositorio contiene una API desarrollada en TypeScript + Express, diseñad
 index.ts # Entry point
 Dockerfile # Configuración para Docker
 tsconfig.json # Configuración de TypeScript
-``
+```
 ##  Tecnologías usadas
 
 - Node.js 20
@@ -34,40 +34,50 @@ tsconfig.json # Configuración de TypeScript
 
 ### 1. Cloná el repositorio
 
-```bash
+```
 git clone https://github.com/tu-usuario/challenge.git
 cd challenge
+```
 
 2. Instalá las dependencias
 
+`
 npm install
+`
 
-3. Crea un archivo .env
+3. Crea un archivo `.env`
 
+```
 MAKERS_API=https://ruta-de-la-api
 API_KEY=tu_clave_proporcionada
+```
 
 4. Levantá el servidor
 
+```
 npm run dev
+```
 
 ## Uso con Docker
 
 Build de la imagen
 
+```
 docker build -t my-app .
+```
 
 Correr el contenedor
 
+```
 docker run -p 3000:3000 --env-file .env my-app
+```
 
 Scripts útiles
 
-``
+```
 npm run dev       # Levanta el servidor con nodemon
 npm run build     # Compila TypeScript
 npm start         # Ejecuta el código compilado (dist/)
 npm run lint      # Linting con ESLint
 npm run format    # Formatea con Prettier
 ```
-``
